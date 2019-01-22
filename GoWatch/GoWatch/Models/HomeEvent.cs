@@ -32,6 +32,8 @@ namespace GoWatch.Models
 
         [Display(Name = "Rate Event")]
         public int RateEvent { get; set; }
-
+        [ForeignKey("ApplicationUser")]
+        public string ApplicationUserId { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
     }
 }
