@@ -197,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BarEventController.cs" />
     <Compile Include="Controllers\CountController.cs" />
     <Compile Include="Controllers\FanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -334,6 +335,7 @@
     <Content Include="Views\HomeEvent\EventDetails.cshtml" />
     <Content Include="Views\Count\Create.cshtml" />
     <Content Include="Views\Count\Index.cshtml" />
+    <Content Include="Views\BarEvent\BarEventsOnMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
