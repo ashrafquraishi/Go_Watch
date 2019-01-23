@@ -1,47 +1,118 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <title>Google Maps Multiple Markers</title>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnG-Bofe_gSBPhvaqdNBYkRGONr6U0gys&callback=initMap">
-    </script>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            padding: 64px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .column-66 {
+            float: left;
+            width: 66.66666%;
+            padding: 20px;
+        }
+
+        .column-33 {
+            float: left;
+            width: 33.33333%;
+            padding: 20px;
+        }
+
+        .large-font {
+            font-size: 48px;
+        }
+
+        .xlarge-font {
+            font-size: 64px
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+
+
+        img {
+            margin: auto;
+        }
+    </style>
+    <style>
+        body {
+            background-position: center;
+            height: 850px;
+            background-image: url('../../Images/DSC100324530.jpg');
+           
+            background-position: center;
+            background-repeat: no-repeat, repeat;
+            padding: 0px;
+        }
+    </style>
 </head>
 <body>
-    <div id="map" style="height: 400px; width: 500px;">
+
+    <div style="text-align:center">
+        
     </div>
-    <script type="text/javascript">
-        var locations = [
-            ['Beach Bar', 43.074620, -87.986960, 5],
-            ['Coogee Bar', 43.085860, -87.964560, 5],
-            ['Milwaukee Bar', 43.069900, -87.916200, 3],
-            ['Manly Bar', 43.016750, -88.024880, 2],
-            ['Maroubra Beach', 43.036660, -87.937610, 1]
-        ];
 
+    <!-- The App Section -->
+    <div class="container">
+        <div class="row">
+            <div class="column-66">
+                <h1 class="xlarge-font"><b>Home Events</b></h1>
+                <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+                <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <br/>  <a href="/HomeEvent/Index" class="button" style="background-color:peachpuff"> View Home Events </a>
+            </div>
+            <div class="column-33">
+                <img src="~/Images/homeevent.jpg" width="335" height="471" />
+               
+            </div>
+        </div>
+    </div>
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: new google.maps.LatLng(43.038902, -87.906471),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
+    <!-- Clarity Section -->
+    <div class="container" style="background-color:	rgba(0, 0, 0, 0.00)">
+        <div class="row">
+            <div class="column-33">
+                <img src="~/Images/images.jpg" alt="Bar" width="535" height="571">
+            </div>
+            <div class="column-66">
+                <h1 class="xlarge-font"><b>Bar Events</b></h1>
+                <h1 class="large-font" style="color:firebrick;"><b>Why not have fun?</b></h1>
+                <font color="#F08080">  <p><span style="font-size:24px"> Party like a pro..</span> Browse all the bar events of you're favorite teams. Come and mingle with new members and friends  while enjoying game.<br /></p>   </font>     
+              <br/>  <a href="/BarEvent/BarIndex" class="button" style="background-color:firebrick"> View Bar Events </a> 
+               
+            </div>
+        </div>
+    </div>
 
-        var infowindow = new google.maps.InfoWindow();
-
-        var marker, i;
-
-        for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map
-            });
-
-            google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                return function () {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                }
-            })(marker, i));
-        }
-    </script>
+    <!-- The App Section -->
+    
 </body>
 </html>

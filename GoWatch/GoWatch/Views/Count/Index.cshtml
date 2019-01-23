@@ -15,7 +15,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Message) at| @Html.DisplayFor(modelItem => item.Countdate)<br />
+            @Html.DisplayFor(modelItem => item.Message) at | @Html.DisplayFor(modelItem => item.Countdate)<br />
             @Html.DisplayFor(modelItem => item.Countlike) likes<br />
             @Html.ActionLink("Like", "Like", new { id = item.CountId })
         </td>
@@ -23,11 +23,7 @@
         <td>
            
         </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CountId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CountId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CountId })
-        </td>*@
+       
     </tr>
 }
 

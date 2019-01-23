@@ -6,29 +6,37 @@
 }
 
 <html>
+
 <head>
+   
 
     <title>Google Maps Multiple Markers</title>
+
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnG-Bofe_gSBPhvaqdNBYkRGONr6U0gys&callback=initMap">
     </script>
+   
 </head>
+
 <body>
-    <div id="map" style="height: 400px; width: 500px;">
+	    <div id="map" style="height: 400px; width: 500px;">
+      
     </div>
+   
     <script type="text/javascript">
-        var locations = [
-            ['Bondi Beach', -33.890542, 151.274856, 4],
-            ['Coogee Beach', -33.923036, 151.259052, 5],
-            ['Cronulla Beach', -34.028249, 151.157507, 3],
-            ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-            ['Maroubra Beach', -33.950198, 151.259302, 1]
-        ];
+	        var locations = [
+            ['Beach Bar', 43.074620, -87.986960, 5],
+            ['Coogee Bar', 43.085860, -87.964560, 5],
+            ['Milwaukee Bar', 43.069900, -87.916200, 3],
+	            ['Manly Bar', 43.016750, -88.024880, 2],
+           ['Maroubra Beach', 43.036660, -87.937610, 1]
+	        ];
+
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: new google.maps.LatLng(-33.92, 151.25),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+	            zoom: 10,
+	            center: new google.maps.LatLng(43.038902, -87.906471),
+	            mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
         var infowindow = new google.maps.InfoWindow();
@@ -36,18 +44,22 @@
         var marker, i;
 
         for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	            marker = new google.maps.Marker({
+	                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                 map: map
-            });
+	            });
 
-            google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                return function () {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
+	            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+	                return function () {
+	                    infowindow.setContent(locations[i][0]);
+	                    infowindow.open(map, marker);
                 }
             })(marker, i));
-        }
+       }
     </script>
+ 
 </body>
+
 </html>
+
+

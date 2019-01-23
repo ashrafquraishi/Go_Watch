@@ -31,7 +31,7 @@ namespace GoWatch.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateBarEvents([Bind(Include = "EventID,BarName,Address,City,State,ZipCode,City,State,TeamName,EventTime")] BarEvents barEvents)
+        public ActionResult CreateBarEvents([Bind(Include = "EventID,BarName,Address,City,State,ZipCode,City,State,TeamName,EventTime,Time")] BarEvents barEvents)
         {
             if (ModelState.IsValid)
             {
@@ -68,14 +68,14 @@ namespace GoWatch.Controllers
 
                 barEvents = db.BarEvent.Where(c => c.ApplicationUserId == UserId).FirstOrDefault();
                 var firstname = (from c in db.BarEvent where c.ApplicationUserId == UserId select c.BarName).FirstOrDefault();
-                
+
                 var address = (from c in db.BarEvent where c.ApplicationUserId == UserId select c.Address).FirstOrDefault();
                 var zipcode = (from c in db.BarEvent where c.ApplicationUserId == UserId select c.ZipCode).FirstOrDefault();
 
                 //Store into View Bag to be retrieved in View page
                 ViewBag.Address = address;
                 ViewBag.Zip = zipcode;
-             
+
 
             }
             return View(barEvents);

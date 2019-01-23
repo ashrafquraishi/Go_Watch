@@ -264,6 +264,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\DSC100324530.jpg" />
+    <Content Include="Images\homeevent.jpg" />
+    <Content Include="Images\images.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -339,10 +342,10 @@
     <Content Include="Views\HomeEvent\EventDetails.cshtml" />
     <Content Include="Views\Count\Create.cshtml" />
     <Content Include="Views\Count\Index.cshtml" />
-    <Content Include="Views\BarEvent\BarEventsOnMap.cshtml" />
     <Content Include="Views\BarEvent\BarIndex.cshtml" />
     <Content Include="Views\BarEvent\CreateBarEvents.cshtml" />
     <Content Include="Views\BarEvent\BarEventDetails.cshtml" />
+    <Content Include="Views\BarEvent\BarEventsOnMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

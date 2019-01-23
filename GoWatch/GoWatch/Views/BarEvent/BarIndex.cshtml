@@ -17,24 +17,11 @@
         <th>
             @Html.DisplayNameFor(model => model.BarName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.State)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.TeamName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventTime)
-        </th>
+        
        
         <th></th>
     </tr>
@@ -53,9 +40,14 @@
           
             <td>
                 @Html.ActionLink("Attending", "Count", "Create", new { id = item.EventID }) |
-                @Html.ActionLink("Details", "BarEvent", "BarEventDetails", new { id = item.EventID }) |
+                @Html.ActionLink("Details", "BarEventDetails", "BarEvent", new { id = item.EventID }) |
+            </td>
+            <td>
+                @Html.ActionLink("Attending", "Count", "Create", new { id = item.EventID }) |
+               
             </td>
         </tr>
+
     }
 
 </table>
