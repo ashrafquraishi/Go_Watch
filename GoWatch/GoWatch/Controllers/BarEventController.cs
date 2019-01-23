@@ -50,8 +50,8 @@ namespace GoWatch.Controllers
         {
 
             var FoundUserId = User.Identity.GetUserId();
-            HomeEvent homeEvent = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
-            return View(homeEvent);
+            BarEvents barEvents = db.BarEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+            return View(barEvents);
         }
         public ActionResult BarEventsOnMap()
         {
