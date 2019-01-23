@@ -26,15 +26,17 @@ namespace GoWatch.Models
         [Display(Name = "Team Name")]
         public string TeamName { get; set; }
         public string Rules { get; set; }
-        [DataType(DataType.DateTime)]
-        DateTime? DateTime { get; set; }
+        [Display(Name = "Time and Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? EventTime { get; set; }
 
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 
 
-        [Display(Name = "Rate Event")]
-        public int RateEvent { get; set; }
+        //[Display(Name = "Rate Event")]
+        //public double? Rating { get; set; }
 
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }

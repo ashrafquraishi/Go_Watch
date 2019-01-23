@@ -3,12 +3,14 @@
 @{
     ViewBag.Title = "Index";
 }
+
 <form action="">
     <div class="form-group">
         <input type="text" class="form-control" name="SearchString" placeholder="Search your Team">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
+
 <table class="table">
     <tr>
         <th>
@@ -33,10 +35,10 @@
             @Html.DisplayNameFor(model => model.Rules)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            @Html.DisplayNameFor(model => model.EventTime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RateEvent)
+            @Html.DisplayNameFor(model => model.Price)
         </th>
        
         <th></th>
@@ -66,12 +68,17 @@
             @Html.DisplayFor(modelItem => item.Rules)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            @Html.DisplayFor(modelItem => item.EventTime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RateEvent)
+            @Html.DisplayFor(modelItem => item.Price)
         </td>
-       
+ 
+        <td>
+      
+            @Html.ActionLink("Details", "EventDetails", new { id=item.EventID }) |
+           
+        </td>
     </tr>
 }
 

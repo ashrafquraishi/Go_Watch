@@ -1,31 +1,46 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<html>
+<head>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <title>Google Maps Multiple Markers</title>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnG-Bofe_gSBPhvaqdNBYkRGONr6U0gys&callback=initMap">
+    </script>
+</head>
+<body>
+    <div id="map" style="height: 400px; width: 500px;">
+    </div>
+    <script type="text/javascript">
+        var locations = [
+            ['Bondi Beach', -33.890542, 151.274856, 4],
+            ['Coogee Beach', -33.923036, 151.259052, 5],
+            ['Cronulla Beach', -34.028249, 151.157507, 3],
+            ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+            ['Maroubra Beach', -33.950198, 151.259302, 1]
+        ];
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(-33.92, 151.25),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    </script>
+</body>
+</html>

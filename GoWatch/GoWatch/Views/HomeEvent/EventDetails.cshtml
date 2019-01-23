@@ -5,9 +5,8 @@
 }
 
 
-
 <div>
-   
+  
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -67,6 +66,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.EventTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventTime)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Price)
         </dt>
 
@@ -74,19 +81,11 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RateEvent)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RateEvent)
-        </dd>
-
-       
+      
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |
+  
     @Html.ActionLink("Back to List", "Index")
 </p>

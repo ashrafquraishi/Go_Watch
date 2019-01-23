@@ -4,8 +4,6 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
 
 @using (Html.BeginForm()) 
 {
@@ -72,18 +70,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EventTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.EventTime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EventTime, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RateEvent, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.RateEvent, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.RateEvent, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
             </div>
         </div>
 

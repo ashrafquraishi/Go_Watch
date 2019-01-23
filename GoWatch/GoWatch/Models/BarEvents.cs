@@ -25,8 +25,10 @@ namespace GoWatch.Models
 
         [Display(Name = "Team Name")]
         public string TeamName { get; set; }
-        [DataType(DataType.DateTime)]
-        DateTime? DateTime { get; set; }
+        [Display(Name = "Time and Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? EventTime { get; set; }
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }

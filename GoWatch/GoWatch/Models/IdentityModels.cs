@@ -29,7 +29,7 @@ namespace GoWatch.Models
         {
             return new ApplicationDbContext();
         }
-
+          public DbSet<Count> Count { get; set; }
         public DbSet<Fan> Fan { get; set; }
         public DbSet<BarEvents> BarEvent { get; set; }
         public DbSet<HomeEvent> HomeEvent { get; set; }

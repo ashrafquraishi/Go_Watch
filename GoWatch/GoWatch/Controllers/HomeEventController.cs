@@ -31,7 +31,7 @@ namespace GoWatch.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,FullName,Address,City,State,ZipCode,City,State,TeamName,Rules,DateTime,Price,RateEvent")] HomeEvent homeEvent)
+        public ActionResult Create([Bind(Include = "EventID,FullName,Address,City,State,ZipCode,City,State,TeamName,Rules,EventTime,Price")] HomeEvent homeEvent)
         {
             if (ModelState.IsValid)
             {
