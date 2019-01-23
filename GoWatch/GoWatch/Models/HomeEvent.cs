@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,8 @@ namespace GoWatch.Models
     {
         [Key]
         public int EventID { get; set; }
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
         public string Address { get; set; }
 
         public string City { get; set; }
@@ -32,6 +35,7 @@ namespace GoWatch.Models
 
         [Display(Name = "Rate Event")]
         public int RateEvent { get; set; }
+
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
