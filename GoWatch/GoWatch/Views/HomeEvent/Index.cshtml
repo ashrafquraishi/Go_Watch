@@ -16,29 +16,9 @@
         <th>
             @Html.DisplayNameFor(model => model.FullName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.State)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.TeamName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rules)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
         </th>
        
         <th></th>
@@ -49,35 +29,16 @@
         <td>
             @Html.DisplayFor(modelItem => item.FullName)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.State)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ZipCode)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.TeamName)
         </td>
+       
+
         <td>
-            @Html.DisplayFor(modelItem => item.Rules)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
- 
-        <td>
-      
-            @Html.ActionLink("Details", "EventDetails", new { id=item.EventID }) |
-           
+
+            @Html.ActionLink("Details", "EventDetails", new { id = item.EventID }) |
+
         </td>
     </tr>
 }

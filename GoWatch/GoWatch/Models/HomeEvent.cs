@@ -26,11 +26,11 @@ namespace GoWatch.Models
         [Display(Name = "Team Name")]
         public string TeamName { get; set; }
         public string Rules { get; set; }
-        [Display(Name = "Time and Date")]
+        [Display(Name = "Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? EventTime { get; set; }
-
+        public string Time { get; set; }
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 

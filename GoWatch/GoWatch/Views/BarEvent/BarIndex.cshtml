@@ -1,0 +1,61 @@
+﻿@model IEnumerable<GoWatch.Models.BarEvents>
+
+@{
+    ViewBag.Title = "BarIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form action="">
+    <div class="form-group">
+        <input type="text" class="form-control" name="SearchString" placeholder="Search your Team">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BarName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventTime)
+        </th>
+       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BarName)
+            </td>
+  
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+          
+          
+            <td>
+                @Html.ActionLink("Attending", "Count", "Create", new { id = item.EventID }) |
+                @Html.ActionLink("Details", "BarEvent", "BarEventDetails", new { id = item.EventID }) |
+            </td>
+        </tr>
+    }
+
+</table>
