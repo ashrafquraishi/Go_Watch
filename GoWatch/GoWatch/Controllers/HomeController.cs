@@ -9,7 +9,7 @@ namespace GoWatch.Controllers
 {
     public class HomeController : Controller
     {
-        TestDbEntities context = new TestDbEntities();
+       
         private ApplicationDbContext db;
         private ApplicationUser user;
 
@@ -23,16 +23,16 @@ namespace GoWatch.Controllers
             
             return View();
         }
-        public JsonResult GetAllLocation()
-        {
-            var data = context.google_map.ToList();
-            return Json(data, JsonRequestBehavior.AllowGet);
-        }
-        public JsonResult GetAllLocationById(int id)
-        {
-            var data = context.google_map.Where(x => x.Id == id).SingleOrDefault();
-            return Json(data, JsonRequestBehavior.AllowGet);
-        }
+        //public JsonResult GetAllLocation()
+        //{
+        //    var data = context.google_map.ToList();
+        //    return Json(data, JsonRequestBehavior.AllowGet);
+        //}
+        //public JsonResult GetAllLocationById(int id)
+        //{
+        //    var data = context.google_map.Where(x => x.Id == id).SingleOrDefault();
+        //    return Json(data, JsonRequestBehavior.AllowGet);
+        //}
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -7,13 +7,13 @@ namespace GoWatch.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class bcas : IMigrationMetadata
+    public sealed partial class tablesadded : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(bcas));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tablesadded));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901240151323_bcas"; }
+            get { return "201901242151056_tables added"; }
         }
         
         string IMigrationMetadata.Source

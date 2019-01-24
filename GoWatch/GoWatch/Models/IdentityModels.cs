@@ -36,6 +36,10 @@ namespace GoWatch.Models
 
 
         public DbSet<GuestList> GuestList { get; set; }
-   
+        public DbSet<Article> Articles { get; set; }
+
+
+        public DbSet<ArticlesComment> ArticlesComments { get; set; }
+
     }
 }

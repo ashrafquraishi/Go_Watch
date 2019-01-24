@@ -196,6 +196,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\ArticlesCommentsController.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BarEventController.cs" />
     <Compile Include="Controllers\CountController.cs" />
@@ -207,62 +209,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="google_map.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901222129455_InitialCreate.cs" />
-    <Compile Include="Migrations\201901222129455_InitialCreate.Designer.cs">
-      <DependentUpon>201901222129455_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901222329509_initial migration.cs" />
-    <Compile Include="Migrations\201901222329509_initial migration.Designer.cs">
-      <DependentUpon>201901222329509_initial migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901230020457_jjj.cs" />
-    <Compile Include="Migrations\201901230020457_jjj.Designer.cs">
-      <DependentUpon>201901230020457_jjj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901230605100_added count .cs" />
-    <Compile Include="Migrations\201901230605100_added count .Designer.cs">
-      <DependentUpon>201901230605100_added count .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901230742173_updated models.cs" />
-    <Compile Include="Migrations\201901230742173_updated models.Designer.cs">
-      <DependentUpon>201901230742173_updated models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901240151323_bcas.cs" />
-    <Compile Include="Migrations\201901240151323_bcas.Designer.cs">
-      <DependentUpon>201901240151323_bcas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901240157363_lkjh.cs" />
-    <Compile Include="Migrations\201901240157363_lkjh.Designer.cs">
-      <DependentUpon>201901240157363_lkjh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901240433598_removed tables.cs" />
-    <Compile Include="Migrations\201901240433598_removed tables.Designer.cs">
-      <DependentUpon>201901240433598_removed tables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201901240826534_extra table.cs" />
-    <Compile Include="Migrations\201901240826534_extra table.Designer.cs">
-      <DependentUpon>201901240826534_extra table.cs</DependentUpon>
+    <Compile Include="Migrations\201901242151056_tables added.cs" />
+    <Compile Include="Migrations\201901242151056_tables added.Designer.cs">
+      <DependentUpon>201901242151056_tables added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\ArticlesComment.cs" />
     <Compile Include="Models\BarEvents.cs" />
     <Compile Include="Models\Count.cs" />
     <Compile Include="Models\GuestList.cs" />
@@ -285,27 +239,12 @@
     <Content Include="Images\DSC100324530.jpg" />
     <Content Include="Images\homeevent.jpg" />
     <Content Include="Images\images.jpg" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <Content Include="Images\StarFade.gif" />
+    <Content Include="Images\StarGlow.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -369,6 +308,17 @@
     <Content Include="Views\BarEvent\GetDirections.cshtml" />
     <Content Include="Views\HomeEvent\StripeForHomeEvents.cshtml" />
     <Content Include="Views\Home\Charge.cshtml" />
+    <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\Articles\Create.cshtml" />
+    <Content Include="Views\Articles\Details.cshtml" />
+    <Content Include="Views\Articles\Edit.cshtml" />
+    <Content Include="Views\Articles\Delete.cshtml" />
+    <Content Include="Views\ArticlesComments\Index.cshtml" />
+    <Content Include="Views\ArticlesComments\Details.cshtml" />
+    <Content Include="Views\ArticlesComments\Create.cshtml" />
+    <Content Include="Views\ArticlesComments\Edit.cshtml" />
+    <Content Include="Views\ArticlesComments\Delete.cshtml" />
+    <Content Include="Views\Shared\_CommentBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -388,36 +338,12 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901222129455_InitialCreate.resx">
-      <DependentUpon>201901222129455_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901222329509_initial migration.resx">
-      <DependentUpon>201901222329509_initial migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901230020457_jjj.resx">
-      <DependentUpon>201901230020457_jjj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901230605100_added count .resx">
-      <DependentUpon>201901230605100_added count .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901230742173_updated models.resx">
-      <DependentUpon>201901230742173_updated models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901240151323_bcas.resx">
-      <DependentUpon>201901240151323_bcas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901240157363_lkjh.resx">
-      <DependentUpon>201901240157363_lkjh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901240433598_removed tables.resx">
-      <DependentUpon>201901240433598_removed tables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901240826534_extra table.resx">
-      <DependentUpon>201901240826534_extra table.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201901242151056_tables added.resx">
+      <DependentUpon>201901242151056_tables added.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
