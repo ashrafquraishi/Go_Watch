@@ -57,7 +57,11 @@ namespace GoWatch.Controllers
         }
 
 
+        public ActionResult GetDirections()
+        {
 
+            return View();
+        }
 
 
 

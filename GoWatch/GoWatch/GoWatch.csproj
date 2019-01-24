@@ -362,8 +362,12 @@
     <Content Include="Views\BarEvent\BarIndex.cshtml" />
     <Content Include="Views\BarEvent\CreateBarEvents.cshtml" />
     <Content Include="Views\BarEvent\BarEventDetails.cshtml" />
-    <Content Include="Views\BarEvent\BarEventsOnMap.cshtml" />
     <Content Include="Views\Fan\Create.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Fan\GetDirections.cshtml" />
+    <Content Include="Views\HomeEvent\GetDirections.cshtml" />
+    <Content Include="Views\BarEvent\GetDirections.cshtml" />
+    <Content Include="Views\HomeEvent\StripeForHomeEvents.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

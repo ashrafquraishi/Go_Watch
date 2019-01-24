@@ -53,6 +53,11 @@ namespace GoWatch.Controllers
             BarEvents barEvents = db.BarEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
             return View(barEvents);
         }
+        public ActionResult GetDirections()
+        {
+
+            return View();
+        }
         public ActionResult BarEventsOnMap()
         {
            

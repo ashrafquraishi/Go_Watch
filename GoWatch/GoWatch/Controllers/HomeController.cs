@@ -11,7 +11,12 @@ namespace GoWatch.Controllers
         TestDbEntities context = new TestDbEntities();
         public ActionResult Index()
         {
-            ViewBag.ListOfDropdown = context.google_map.ToList();
+            
+            return View();
+        }
+        public ActionResult Index2()
+        {
+            
             return View();
         }
         public JsonResult GetAllLocation()

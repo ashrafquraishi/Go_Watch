@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -54,6 +55,16 @@ namespace GoWatch.Controllers
             HomeEvent homeEvent = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
             return View(homeEvent);
         }
+        public ActionResult GetDirections()
+        {
 
+            return View();
+        }
+        public ActionResult StripeForHomeEvents()
+        {
+            var stripePublishKey = ConfigurationManager.AppSettings["stripePublishableKey"];
+            ViewBag.StripePublishKey = stripePublishKey;
+            return View();
+        }
     }
 }
