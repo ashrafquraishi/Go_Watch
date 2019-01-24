@@ -33,5 +33,9 @@ namespace GoWatch.Models
         public DbSet<Fan> Fan { get; set; }
         public DbSet<BarEvents> BarEvent { get; set; }
         public DbSet<HomeEvent> HomeEvent { get; set; }
+
+
+        public DbSet<GuestList> GuestList { get; set; }
+   
     }
 }

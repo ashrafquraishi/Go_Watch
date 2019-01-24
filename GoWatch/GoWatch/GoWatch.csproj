@@ -200,6 +200,7 @@
     <Compile Include="Controllers\BarEventController.cs" />
     <Compile Include="Controllers\CountController.cs" />
     <Compile Include="Controllers\FanController.cs" />
+    <Compile Include="Controllers\GuestListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEventController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -229,6 +230,22 @@
     <Compile Include="Migrations\201901230742173_updated models.Designer.cs">
       <DependentUpon>201901230742173_updated models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901240151323_bcas.cs" />
+    <Compile Include="Migrations\201901240151323_bcas.Designer.cs">
+      <DependentUpon>201901240151323_bcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240157363_lkjh.cs" />
+    <Compile Include="Migrations\201901240157363_lkjh.Designer.cs">
+      <DependentUpon>201901240157363_lkjh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240433598_removed tables.cs" />
+    <Compile Include="Migrations\201901240433598_removed tables.Designer.cs">
+      <DependentUpon>201901240433598_removed tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240826534_extra table.cs" />
+    <Compile Include="Migrations\201901240826534_extra table.Designer.cs">
+      <DependentUpon>201901240826534_extra table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -248,6 +265,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BarEvents.cs" />
     <Compile Include="Models\Count.cs" />
+    <Compile Include="Models\GuestList.cs" />
     <Compile Include="Models\HomeEvent.cs" />
     <Compile Include="Models\Fan.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -335,7 +353,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Fan\Index.cshtml" />
-    <Content Include="Views\Fan\Create.cshtml" />
     <Content Include="Views\Fan\FanDetails.cshtml" />
     <Content Include="Views\HomeEvent\Index.cshtml" />
     <Content Include="Views\HomeEvent\Create.cshtml" />
@@ -346,9 +363,11 @@
     <Content Include="Views\BarEvent\CreateBarEvents.cshtml" />
     <Content Include="Views\BarEvent\BarEventDetails.cshtml" />
     <Content Include="Views\BarEvent\BarEventsOnMap.cshtml" />
+    <Content Include="Views\Fan\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\GuestList\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -378,6 +397,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901230742173_updated models.resx">
       <DependentUpon>201901230742173_updated models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240151323_bcas.resx">
+      <DependentUpon>201901240151323_bcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240157363_lkjh.resx">
+      <DependentUpon>201901240157363_lkjh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240433598_removed tables.resx">
+      <DependentUpon>201901240433598_removed tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240826534_extra table.resx">
+      <DependentUpon>201901240826534_extra table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

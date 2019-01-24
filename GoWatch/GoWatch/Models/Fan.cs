@@ -30,6 +30,7 @@ namespace GoWatch.Models
         public string ZipCode { get; set; }
 
 
+
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
