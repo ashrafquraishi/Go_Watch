@@ -4,7 +4,16 @@
     ViewBag.Title = "EventDetails";
 }
 
-
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+    }
+</style>
 <div>
 
     <hr />
@@ -91,10 +100,13 @@
 
     </dl>
 </div>
+<a href="/HomeEvent/StripeForHomeEvents" class="button" style="background-color:rgba(114, 202, 164, 0.54)"> Make a payment </a> |
+<a href="/HomeEvent/Index" class="button" style="background-color:rgba(114, 202, 164, 0.54)"> Back to list </a>
 <p>
 
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Back to List", "Index")*@
 </p>
+<br/><br /><br /><br />
 <!DOCTYPE html>
 <html>
 <head>

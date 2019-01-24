@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoWatch.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,9 @@ namespace GoWatch.Controllers
     public class HomeController : Controller
     {
         TestDbEntities context = new TestDbEntities();
+        private ApplicationDbContext db;
+        private ApplicationUser user;
+
         public ActionResult Index()
         {
             
@@ -35,7 +39,12 @@ namespace GoWatch.Controllers
 
             return View();
         }
-
+        public ActionResult Charge(string stripeEmail, string stripeToken)
+        {
+            db = new ApplicationDbContext();
+            user = new ApplicationUser();
+            return View();
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

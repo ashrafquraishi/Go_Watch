@@ -368,6 +368,7 @@
     <Content Include="Views\HomeEvent\GetDirections.cshtml" />
     <Content Include="Views\BarEvent\GetDirections.cshtml" />
     <Content Include="Views\HomeEvent\StripeForHomeEvents.cshtml" />
+    <Content Include="Views\Home\Charge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
