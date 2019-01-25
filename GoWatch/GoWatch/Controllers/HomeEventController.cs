@@ -55,6 +55,34 @@ namespace GoWatch.Controllers
             HomeEvent homeEvent = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
             return View(homeEvent);
         }
+        public ActionResult GetAttendesList()
+        {
+            var FoundUserId = User.Identity.GetUserId();
+            HomeEvent homeEvent = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+            //var GoingToEvent = db.GuestList.Where(s => s.Going).ToString();
+            GuestList guestList = new GuestList();
+            var GoingToEvent = guestList.Going;
+            if(GoingToEvent == false)
+            {
+                return View();
+            }
+            else
+            {
+                   List<HomeEvent> AllHomeEventAttendeeList;
+
+                AllHomeEventAttendeeList = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).ToList();
+
+                if (AllHomeEventAttendeeList.Any())
+                {
+                    return View();
+                }
+                else
+                {
+                    return View(AllHomeEventAttendeeList);
+                }
+            }
+          
+        }
         public ActionResult GetDirections()
         {
 

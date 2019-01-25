@@ -202,6 +202,7 @@
     <Compile Include="Controllers\BarEventController.cs" />
     <Compile Include="Controllers\CountController.cs" />
     <Compile Include="Controllers\FanController.cs" />
+    <Compile Include="Controllers\FriendRequestController.cs" />
     <Compile Include="Controllers\GuestListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEventController.cs" />
@@ -213,12 +214,17 @@
     <Compile Include="Migrations\201901242151056_tables added.Designer.cs">
       <DependentUpon>201901242151056_tables added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901250242317_tables added2.cs" />
+    <Compile Include="Migrations\201901250242317_tables added2.Designer.cs">
+      <DependentUpon>201901250242317_tables added2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\ArticlesComment.cs" />
     <Compile Include="Models\BarEvents.cs" />
     <Compile Include="Models\Count.cs" />
+    <Compile Include="Models\EmailFormModel.cs" />
     <Compile Include="Models\GuestList.cs" />
     <Compile Include="Models\HomeEvent.cs" />
     <Compile Include="Models\Fan.cs" />
@@ -321,6 +327,8 @@
     <Content Include="Views\ArticlesComments\Edit.cshtml" />
     <Content Include="Views\ArticlesComments\Delete.cshtml" />
     <Content Include="Views\Shared\_CommentBox.cshtml" />
+    <Content Include="Views\HomeEvent\GetAttendesList.cshtml" />
+    <Content Include="Views\FriendRequest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -345,6 +353,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901242151056_tables added.resx">
       <DependentUpon>201901242151056_tables added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901250242317_tables added2.resx">
+      <DependentUpon>201901250242317_tables added2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

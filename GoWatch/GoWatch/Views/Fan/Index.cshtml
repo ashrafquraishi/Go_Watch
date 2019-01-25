@@ -2,6 +2,8 @@
 
 @{
     ViewBag.Title = "Index";
+
+    //E-mail code will be here
 }
 
 <br /><br /><br /><br /><br /><br /><br />
@@ -33,7 +35,7 @@
             @Html.DisplayNameFor(model => model.ZipCode)
         </th>
 
-        <th></th>
+        <th>Tasks</th>
     </tr>
 
     @foreach (var item in Model)
@@ -57,7 +59,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ZipCode)
             </td>
-
+            <td>
+                <button onclick="location.href='@Url.Action("Index", "FriendRequest")'">Add Friend</button>
+            </td>
         </tr>
     }
 
