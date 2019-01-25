@@ -14,7 +14,7 @@ namespace GoWatch.Controllers
         {
             //TODO: Figure out how to insert the e-mail address into this paramater
 
-            MailMessage mail = new MailMessage("you@yourcompany.com", "test@test.com");
+            MailMessage mail = new MailMessage("ashrafquraishi4@gmail.com", "quraishiiff@gmail.com");
             SmtpClient client = new SmtpClient
             {
                 Port = 25,

@@ -34,7 +34,8 @@ namespace GoWatch.Models
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 
-  
+        public bool Going { get; set; }
+        public bool Arrived { get; set; }
         public List<HomeEvent> AllHomeEventAttendeeList { get; set; }
         //[Display(Name = "Rate Event")]
         //public double? Rating { get; set; }

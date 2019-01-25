@@ -32,7 +32,7 @@ namespace GoWatch.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,FullName,Address,City,State,ZipCode,City,State,TeamName,Rules,EventTime,Time,Price")] HomeEvent homeEvent)
+        public ActionResult Create([Bind(Include = "EventID,FullName,Address,City,State,ZipCode,City,State,TeamName,Rules,EventTime,Time,Price,Going,Arrived")] HomeEvent homeEvent)
         {
             if (ModelState.IsValid)
             {
@@ -60,8 +60,9 @@ namespace GoWatch.Controllers
             var FoundUserId = User.Identity.GetUserId();
             HomeEvent homeEvent = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
             //var GoingToEvent = db.GuestList.Where(s => s.Going).ToString();
-            GuestList guestList = new GuestList();
-            var GoingToEvent = guestList.Going;
+           // GuestList guestList = new GuestList();
+            HomeEvent homeEvents = new HomeEvent();
+            var GoingToEvent = homeEvents.Going;
             if(GoingToEvent == false)
             {
                 return View();
@@ -70,8 +71,8 @@ namespace GoWatch.Controllers
             {
                    List<HomeEvent> AllHomeEventAttendeeList;
 
-                AllHomeEventAttendeeList = db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).ToList();
-
+                AllHomeEventAttendeeList =/* Convert.ToUInt16(homeEvent.FullName);//*/db.HomeEvent.Where(c => c.ApplicationUserId == FoundUserId).ToList();
+                 
                 if (AllHomeEventAttendeeList.Any())
                 {
                     return View();

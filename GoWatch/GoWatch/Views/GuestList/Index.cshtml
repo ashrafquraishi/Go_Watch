@@ -1,0 +1,36 @@
+﻿@model IEnumerable<GoWatch.Models.GuestList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of people who are interested</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Going)
+        </th>
+    
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Going)
+        </td>
+       
+     
+    </tr>
+}
+
+</table>

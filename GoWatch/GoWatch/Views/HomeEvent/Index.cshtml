@@ -3,14 +3,26 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<br/><br /><br /><br /><br /><br />
+                             <style>
+                                 .button {
+                                     border: none;
+                                     color: black;
+                                     padding: 7px 14px;
+                                     font-size: 15px;
+                                     cursor: pointer;
+                                     background-color: #4CAF50;
+                                 }
+                             </style>
 <form action="">
     <div class="form-group">
         <input type="text" class="form-control" name="SearchString" placeholder="Search your Team">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+    <button type="submit" style="background-color:sandybrown">Submit</button>
 
+    
+</form>
+<br/><br /><br />
 <table class="table">
     <tr>
         <th>
@@ -20,7 +32,7 @@
         <th>
             @Html.DisplayNameFor(model => model.TeamName)
         </th>
-       
+        
         <th></th>
     </tr>
 
@@ -37,9 +49,15 @@
 
         <td>
 
-            @Html.ActionLink("Details", "EventDetails", new { id = item.EventID }) |
-            @Html.ActionLink("Get Directions", "GetDirections", new { id = item.EventID })|
-           
+            @*@Html.ActionLink("Details", "EventDetails", new { id = item.EventID }) |*@
+            @*@Html.ActionLink("Get Directions", "GetDirections", new { id = item.EventID })|*@
+            <a href="/HomeEvent/EventDetails" class="button" style="background-color:sandybrown"> Details</a>|
+
+            <a href="/HomeEvent/GetDirections" class="button" style="background-color:sandybrown"> Get Directions </a>|
+
+            <a href="/GuestList/Index" class="button" style="background-color:sandybrown"> Intrested </a>|
+            <a href="/GuestList/ArrivedIndex" class="button" style="background-color:sandybrown"> CheckIn </a>
+
         </td>
     </tr>
 }

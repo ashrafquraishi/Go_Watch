@@ -218,6 +218,18 @@
     <Compile Include="Migrations\201901250242317_tables added2.Designer.cs">
       <DependentUpon>201901250242317_tables added2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901252152083_Attendee list.cs" />
+    <Compile Include="Migrations\201901252152083_Attendee list.Designer.cs">
+      <DependentUpon>201901252152083_Attendee list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901252250167_listt.cs" />
+    <Compile Include="Migrations\201901252250167_listt.Designer.cs">
+      <DependentUpon>201901252250167_listt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901252256376_removed fk.cs" />
+    <Compile Include="Migrations\201901252256376_removed fk.Designer.cs">
+      <DependentUpon>201901252256376_removed fk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Article.cs" />
@@ -329,10 +341,15 @@
     <Content Include="Views\Shared\_CommentBox.cshtml" />
     <Content Include="Views\HomeEvent\GetAttendesList.cshtml" />
     <Content Include="Views\FriendRequest\Index.cshtml" />
+    <Content Include="Views\GuestList\CreateGuestList.cshtml" />
+    <Content Include="Views\GuestList\GuestListDetails.cshtml" />
+    <Content Include="Views\GuestList\Index.cshtml" />
+    <Content Include="Views\GuestList\ArrivedIndex.cshtml" />
+    <Content Include="Views\GuestList\CreateGuestArrivedList.cshtml" />
+    <Content Include="Views\GuestList\GuestArrivedListDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\GuestList\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -356,6 +373,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901250242317_tables added2.resx">
       <DependentUpon>201901250242317_tables added2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901252152083_Attendee list.resx">
+      <DependentUpon>201901252152083_Attendee list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901252250167_listt.resx">
+      <DependentUpon>201901252250167_listt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901252256376_removed fk.resx">
+      <DependentUpon>201901252256376_removed fk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

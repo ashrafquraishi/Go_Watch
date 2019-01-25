@@ -11,21 +11,11 @@ namespace GoWatch.Models
     {
         [Key]
         public int GuestListID { get; set; }
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
         public bool Going { get; set; }
         public bool Arrived { get; set; }
-        [ForeignKey("Fan")]
-        public int FanID { get; set; }
-        public Fan Fan { get; set; }
-
-
-        [ForeignKey("HomeEvent")]
-        public int EventID { get; set; }
-        public HomeEvent HomeEvent { get; set; }
-
-
-        [ForeignKey("BarEvents")]
-        public int BarEventID { get; set; }
-        public BarEvents BarEvents { get; set; }
+      
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }

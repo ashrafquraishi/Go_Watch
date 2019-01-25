@@ -18,14 +18,14 @@ namespace GoWatch.Controllers
         }
 
 
-        public ActionResult CreateGuest()
+        public ActionResult CreateGuestList()
         {
 
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateBarEvents([Bind(Include = "GuestListID,Going,Arrived")] GuestList guestList)
+        public ActionResult CreateGuestList([Bind(Include = "GuestListID,FullName,Going")] GuestList guestList)
         {
             if (ModelState.IsValid)
             {
@@ -35,7 +35,7 @@ namespace GoWatch.Controllers
 
                 db.GuestList.Add(guestList);
                 db.SaveChanges();
-                return RedirectToAction("GuestListDetails", new { id = guestList.EventID });
+                return RedirectToAction("GuestListDetails", new { id = guestList.GuestListID });
 
             }
             return View(guestList);
@@ -47,5 +47,58 @@ namespace GoWatch.Controllers
             GuestList guestList = db.GuestList.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
             return View(guestList);
         }
+
+
+
+
+
+
+
+
+/// <summary>
+/// /////
+/// 
+/// 
+/// 
+/// 
+/// </summary>
+/// <returns></returns>
+        public ActionResult ArrivedIndex()
+        {
+            return View(db.GuestList.ToList());
+        }
+
+
+        public ActionResult CreateGuestArrivedList()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateGuestArrivedList([Bind(Include = "GuestListID,FullName,Arrived")] GuestList guestList)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userId = User.Identity.GetUserId();
+                guestList.ApplicationUserId = userId;
+
+                db.GuestList.Add(guestList);
+                db.SaveChanges();
+                return RedirectToAction("GuestArrivedListDetails", new { id = guestList.GuestListID });
+
+            }
+            return View(guestList);
+        }
+        public ActionResult GuestArrivedListDetails()
+        {
+
+            var FoundUserId = User.Identity.GetUserId();
+            GuestList guestList = db.GuestList.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+            return View(guestList);
+        }
+
     }
 }
