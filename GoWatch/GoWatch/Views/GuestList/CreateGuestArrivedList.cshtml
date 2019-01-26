@@ -3,13 +3,24 @@
 @{
     ViewBag.Title = "CreateGuestArrivedList";
 }
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                                                  <style>
+                                                                      body {
+                                                                          background-position: center;
+                                                                          height: 20px;
+                                                                          background-image: url('../../Images/15002.jpg');
+                                                                          background-position: center;
+                                                                          background-repeat: no-repeat, repeat;
+                                                                          background-size: auto;
+                                                                          padding: 50px;
+                                                                      }
+                                                                  </style>
 <h2>Enter your name if you arrived</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>GuestList</h4>
         <hr />
@@ -22,7 +33,7 @@
             </div>
         </div>
 
-       
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.Arrived, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -34,7 +45,7 @@
             </div>
         </div>
 
-      
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

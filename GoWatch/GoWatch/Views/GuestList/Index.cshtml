@@ -3,9 +3,19 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <h2>List of people who are interested</h2>
-
+<style>
+    body {
+        background-position: center;
+        height: 20px;
+        background-image: url('../../Images/15002.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        background-size: auto;
+        padding: 50px;
+    }
+</style>
 
 <table class="table">
     <tr>
@@ -15,22 +25,23 @@
         <th>
             @Html.DisplayNameFor(model => model.Going)
         </th>
-    
-       
+
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Going)
-        </td>
-       
-     
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Going)
+            </td>
+
+
+        </tr>
+    }
 
 </table>

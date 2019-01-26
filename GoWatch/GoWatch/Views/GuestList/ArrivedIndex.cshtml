@@ -3,7 +3,18 @@
 @{
     ViewBag.Title = "ArrivedIndex";
 }
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                                                  <style>
+                                                                      body {
+                                                                          background-position: center;
+                                                                          height: 20px;
+                                                                          background-image: url('../../Images/15002.jpg');
+                                                                          background-position: center;
+                                                                          background-repeat: no-repeat, repeat;
+                                                                          background-size: auto;
+                                                                          padding: 50px;
+                                                                      }
+                                                                  </style>
 <h2>People Already Arrived</h2>
 
 <table class="table">
@@ -11,26 +22,27 @@
         <th>
             @Html.DisplayNameFor(model => model.FullName)
         </th>
-       
+
         <th>
             @Html.DisplayNameFor(model => model.Arrived)
         </th>
-        
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullName)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.Arrived)
-        </td>
-       
-       
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrived)
+            </td>
+
+
+        </tr>
+    }
 
 </table>
