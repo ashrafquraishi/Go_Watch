@@ -2,7 +2,18 @@
 @{
     ViewBag.Title = "Register";
 }
-
+<style>
+    body {
+        background-position: center;
+        height: 20px;
+       
+        background-image: url('../../Images/8196.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        background-size: auto;
+        padding: 50px;
+    }
+</style>
 <h2>@ViewBag.Title.</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
